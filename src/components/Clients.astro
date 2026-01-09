@@ -1,0 +1,119 @@
+---
+const clients = ["CFE", "GRUPO PIASA", "ALPURA", "UNIFIRST", "SERROT", "DTR"];
+---
+
+<section class="section clients-section">
+    <div class="container fluid">
+        <p
+            class="text-center"
+            style="text-align: center; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #666;"
+        >
+            Confían en nosotros
+        </p>
+
+        <div class="slider">
+            <div class="slide-track">
+                {
+                    [...clients, ...clients, ...clients].map((client) => (
+                        <div class="slide">
+                            <div class="client-logo">{client}</div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .clients-section {
+        padding: 4rem 0;
+        background: var(--bg-card);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        overflow: hidden;
+    }
+
+    .slider {
+        margin: auto;
+        position: relative;
+        width: 100%;
+        display: flex; /* Changed from grid to flex for easier start alignment */
+        align-items: center; /* Vertical center */
+        overflow: hidden;
+    }
+
+    .slider::before,
+    .slider::after {
+        background: linear-gradient(
+            to right,
+            var(--bg-card) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 15%;
+        z-index: 2;
+    }
+
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    .slide-track {
+        display: flex;
+        flex-wrap: nowrap; /* Ensure no wrapping */
+        width: calc(250px * 18); /* 6 clients * 3 sets = 18 items */
+        animation: scroll 60s linear infinite; /* Slower animation for more items */
+    }
+
+    .slide {
+        height: 100px;
+        width: 250px;
+        flex-shrink: 0; /* Prevent squashing */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .client-logo {
+        font-weight: 800;
+        color: #888;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        transition: color 0.3s;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+    .client-logo:hover {
+        color: var(--primary);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(
+                calc(-250px * 9)
+            ); /* Move half of the items (1.5 sets) is tricky. Let's move 1 full set = 6 items */
+            /* Actually, we want seamless. We have 3 sets: A B C. 
+               Start: A B C visible.
+               End: B C A visible?
+               If we move by 1 set width (6 items), we show B C (and part of next A).
+               Ideally, we move exactly the width of ONE set of unique items.
+               6 items * 250px = 1500px.
+            */
+            transform: translateX(calc(-250px * 6));
+        }
+    }
+</style>

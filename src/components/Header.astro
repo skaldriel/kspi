@@ -1,0 +1,197 @@
+---
+
+---
+
+<header id="main-header">
+    <div class="top-bar">
+        <div class="container">
+            <span>RFC: KMI1909174X6</span>
+            <span>San Luis Potosí, S.L.P.</span>
+        </div>
+    </div>
+    <nav class="navbar container">
+        <div class="logo">
+            <a href="#">
+                <img src="/kspi-logo-t.png" alt="Logo" />
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#suministros">Suministros</a></li>
+            <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: background 0.3s;
+    }
+
+    .top-bar {
+        background: var(--secondary);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.8rem;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .top-bar .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .logo a {
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: -2px;
+        color: white;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: white;
+    }
+
+    .btn-nav {
+        border: 1px solid var(--primary);
+        padding: 8px 20px;
+        color: var(--primary) !important;
+    }
+
+    .btn-nav:hover {
+        background: var(--primary);
+        color: white !important;
+    }
+
+    /* Scrolled State */
+    /* Scrolled State */
+    header.scrolled {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header.scrolled .logo a {
+        color: var(--secondary);
+    }
+
+    header.scrolled .nav-links a {
+        color: var(--text-main);
+    }
+
+    header.scrolled .nav-links a:hover,
+    header.scrolled .nav-links a.active {
+        color: var(--primary);
+    }
+
+    header.scrolled .mobile-menu-btn span {
+        background: var(--text-main);
+    }
+
+    header.scrolled .top-bar {
+        display: none;
+    }
+
+    header.scrolled .navbar {
+        padding: 15px 20px;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--secondary);
+            flex-direction: column;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        .top-bar {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    // Sticky Header
+    const header = document.getElementById("main-header");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header?.classList.add("scrolled");
+        } else {
+            header?.classList.remove("scrolled");
+        }
+    });
+
+    // Mobile Menu
+    const btn = document.querySelector(".mobile-menu-btn");
+    const nav = document.querySelector(".nav-links");
+    btn?.addEventListener("click", () => {
+        nav?.classList.toggle("open");
+    });
+</script>
