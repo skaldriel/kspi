@@ -1,35 +1,5 @@
 ---
-const projects = [
-  {
-    title: "Industria Alimentaria",
-    description: "Conductor intermedio y elevadores de azúcar",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2670&auto=format&fit=crop",
-    tags: ["Mecánica", "Montaje"],
-  },
-  {
-    title: "Remodelación integral",
-    description:
-      "Remodelación integral de edificaciones corporativas, laboratorios y áreas alimentarias",
-    image:
-      "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2670&auto=format&fit=crop",
-    tags: ["Obra Civil", "Refrigeración"],
-  },
-  {
-    title: "Infraestructura Hidráulica",
-    description: "Montaje de válvulas en tanques de almacenamiento",
-    image:
-      "https://images.unsplash.com/photo-1565514020125-14f76bef8658?q=80&w=2670&auto=format&fit=crop",
-    tags: ["Tuberías", "Válvulas"],
-  },
-  {
-    title: "Fabricación Especializada",
-    description: "Elevador de alimentos y estructuras",
-    image:
-      "https://images.unsplash.com/photo-1531834685032-c34bf0d84c71?q=80&w=2597&auto=format&fit=crop",
-    tags: ["Acero Inox", "Estructural"],
-  },
-];
+const { projects } = await import("../data/projects");
 ---
 
 <section id="proyectos" class="section">
@@ -42,7 +12,7 @@ const projects = [
     <div class="grid grid-2">
       {
         projects.map((project) => (
-          <div class="project-card">
+          <a href={`/proyectos/${project.id}`} class="project-card">
             <div class="project-image">
               <img src={project.image} alt={project.title} />
               <div class="overlay">
@@ -57,7 +27,7 @@ const projects = [
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>
