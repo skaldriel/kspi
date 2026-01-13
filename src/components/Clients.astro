@@ -1,14 +1,13 @@
 ---
 const clients = [
-  "CFE",
-  "GRUPO PIASA",
-  "ALPURA",
-  "UNIFIRST",
-  "SERROT",
-  "DTR",
-  "DTR",
-  "GRUPO SANTOS",
-  "GRUPO PORRES",
+  "https://www.freelogovectors.net/wp-content/uploads/2019/01/cfe-logo-comision-federal-de-electricidad.png",
+  "https://grupopiasa.com/newsite/wp-content/uploads/2024/11/frisa-logo-hor.svg",
+  "https://alpura.com/wp-content/uploads/2020/06/alpura-logo.png",
+  "https://cdn-iledapi.nitrocdn.com/XARToxvadwINbQrnIgtdShqlLFXTBXLV/assets/images/optimized/rev-f84d36e/unifirst.com/wp-content/uploads/2022/11/UniFirst-Logo.svg",
+  "https://dicsa.com.mx/wp-content/uploads/2020/11/new-logo-serrot-2020.jpg",
+  "https://www.santos.com.mx/wp-content/uploads/2019/01/logo.png",
+  "https://grupoporres.com.mx/assets/images/resources/logo.png",
+  "https://www.quesoscarranco.com.mx/wp-content/uploads/2024/11/carranco-white-logo.png",
 ];
 ---
 
@@ -26,7 +25,9 @@ const clients = [
         {
           [...clients, ...clients, ...clients].map((client) => (
             <div class="slide">
-              <div class="client-logo">{client}</div>
+              <div class="client-logo">
+                <img src={client} alt={client} />
+              </div>
             </div>
           ))
         }
@@ -102,6 +103,11 @@ const clients = [
     transition: color 0.3s;
     cursor: default;
     white-space: nowrap;
+  }
+
+  .client-logo img {
+    width: 150px;
+    height: auto;
   }
 
   .client-logo:hover {
