@@ -1,139 +1,147 @@
 ---
 const services = [
-    {
-        title: "Mantenimiento Industrial y Mecánico",
-        icon: "⚙️",
-        items: [
-            "Reparación de calderas (flux, refractario)",
-            "Mantenimiento a Chiller’s y torres de enfriamiento",
-            "Soldadura y pailería (montaje de equipos)",
-            "Mantenimiento a compresores de aire",
-        ],
-    },
-    {
-        title: "Ingeniería de Procesos y Tuberías",
-        icon: "🔧",
-        items: [
-            "Instalación de tuberías (gas, aceite, vapor)",
-            "Tubería sanitaria y acero inoxidable",
-            "Instalación de válvulas y medidores",
-            "Redes hidráulicas y PVC",
-        ],
-    },
-    {
-        title: "Obra Civil y Estructural",
-        icon: "🏗️",
-        items: [
-            "Construcción de naves industriales",
-            "Cálculo estructural y cimentaciones",
-            "Impermeabilización de techumbres",
-            "Remodelaciones y pisos antiestáticos",
-        ],
-    },
-    {
-        title: "Ingeniería Ambiental y Agua",
-        icon: "💧",
-        items: [
-            "Plantas de tratamiento de aguas",
-            "Planes de manejo de residuos",
-            "Sistemas de potabilización",
-            "Estudios de impacto ambiental",
-        ],
-    },
-    {
-        title: "Proyectos Eléctricos",
-        icon: "⚡",
-        items: [
-            "Instalaciones media y baja tensión",
-            "Tableros de control",
-            "Transformadores y subestaciones",
-            "Iluminación industrial",
-        ],
-    },
+  {
+    title: "Mantenimiento Industrial y Mecánico",
+    icon: "⚙️",
+    items: [
+      "Mantenimiento de sistemas de generación de vapor (industrial y comercial)",
+      "Mantenimiento a Chiller’s y torres de enfriamiento",
+      "Soldadura y pailería especializada",
+      "Mantenimiento general de compresores",
+      "Montaje de equipos industriales",
+      "Mantenimiento estructural",
+    ],
+  },
+  {
+    title: "Ingeniería de Procesos y Tuberías",
+    icon: "🔧",
+    items: [
+      "Instalación de tuberías (gas, aceite, vapor)",
+      "Tubería sanitaria y acero inoxidable",
+      "Instalación de válvulas y medidores",
+      "Redes hidráulicas",
+      "Mantenimiento general de válvulas hidráhulicas",
+    ],
+  },
+  {
+    title: "Obra Civil y Estructural",
+    icon: "🏗️",
+    items: [
+      "Construcción de naves industriales",
+      "Cálculo estructural y cimentaciones",
+      "Impermeabilización: residencial, comercial e industrial",
+      "Remodelaciones especializadas: sanitarias y alimentarias",
+    ],
+  },
+  {
+    title: "Ingeniería Ambiental y Agua",
+    icon: "💧",
+    items: [
+      "Plantas de tratamiento de aguas",
+      "Planes de manejo de residuos",
+      "Sistemas de potabilización",
+      "Estudios de impacto ambiental",
+    ],
+  },
+  {
+    title: "Proyectos Eléctricos",
+    icon: "⚡",
+    items: [
+      "Instalaciones media y baja tensión",
+      "Tableros de control",
+      "Transformadores y subestaciones",
+      "Iluminación industrial",
+    ],
+  },
+  {
+    title: "Proyectos de Tecnologias de Información",
+    icon: "📡",
+    items: ["Instalación de redes de voz y datos", "Desarrollo de software"],
+  },
 ];
 ---
 
 <section id="servicios" class="section services-section">
-    <div class="container">
-        <span class="section-subtitle">Nuestro Catálogo</span>
-        <h2 class="section-title">
-            Soluciones <span style="color: var(--primary);">Técnicas</span>
-        </h2>
+  <div class="container">
+    <span class="section-subtitle">Nuestro Catálogo</span>
+    <h2 class="section-title">
+      Soluciones <span style="color: var(--primary);">Técnicas</span>
+    </h2>
 
-        <div class="grid grid-3">
-            {
-                services.map((service) => (
-                    <div class="service-card">
-                        <div class="service-header">
-                            <span class="service-icon">{service.icon}</span>
-                            <h3>{service.title}</h3>
-                        </div>
-                        <ul class="service-list">
-                            {service.items.map((item) => (
-                                <li>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))
-            }
-        </div>
+    <div class="grid grid-3">
+      {
+        services.map((service) => (
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-icon">{service.icon}</span>
+              <h3>{service.title}</h3>
+            </div>
+            <ul class="service-list">
+              {service.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
     </div>
+  </div>
 </section>
 
 <style>
-    .services-section {
-        background: var(--bg-main);
-    }
+  .services-section {
+    background: var(--bg-main);
+  }
 
-    .service-card {
-        background: var(--bg-card);
-        padding: 2rem;
-        border: 1px solid var(--border);
-        transition: all 0.3s ease;
-        height: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
+  .service-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
 
-    .service-card:hover {
-        border-color: var(--primary);
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
+  .service-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
 
-    .service-header {
-        margin-bottom: 1.5rem;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 1rem;
-    }
+  .service-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
 
-    .service-icon {
-        font-size: 2rem;
-        display: block;
-        margin-bottom: 1rem;
-        color: var(--primary);
-    }
+  .service-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
 
-    .service-card h3 {
-        font-size: 1.3rem;
-        color: var(--secondary);
-    }
+  .service-card h3 {
+    font-size: 1.3rem;
+    color: var(--secondary);
+  }
 
-    .service-list li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.8rem;
-        color: var(--text-muted);
-        font-size: 0.95rem;
-    }
+  .service-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
 
-    .service-list li::before {
-        content: "›";
-        position: absolute;
-        left: 0;
-        color: var(--primary);
-        font-weight: bold;
-        font-size: 1.2rem;
-        line-height: 1;
-        top: -2px;
-    }
+  .service-list li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+    top: -2px;
+  }
 </style>

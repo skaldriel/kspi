@@ -3,107 +3,109 @@
 ---
 
 <section id="suministros" class="section supplies-section">
-    <div class="container">
-        <div class="content-wrapper">
-            <div class="text-content">
-                <span class="section-subtitle">Proveeduría</span>
-                <h2 class="section-title">
-                    Venta de <span style="color: var(--primary);"
-                        >Suministros</span
-                    >
-                </h2>
-                <p>
-                    Contamos con alianzas estratégicas para el suministro de
-                    materiales de alta calidad para su industria.
-                </p>
-                <ul class="supply-list">
-                    <li>
-                        <strong style="color:var(--primary);"
-                            >Herramientas:</strong
-                        > Distribución marca TRUPER.
-                    </li>
-                    <li>
-                        <strong style="color:var(--primary);">Eléctrico:</strong
-                        > Cables, luminarias y equipos (Respaldo COEL).
-                    </li>
-                    <li>
-                        <strong style="color:var(--primary);">Tuberías:</strong> Acero,
-                        cobre, PVC e instrumentación.
-                    </li>
-                </ul>
-            </div>
-            <div class="brands-grid">
-                <div class="brand-box truper">TRUPER</div>
-                <div class="brand-box coel">COEL</div>
-                <div class="brand-box">Tubería Industrial</div>
-                <div class="brand-box">Válvulas</div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <span class="section-subtitle">Proveeduría</span>
+        <h2 class="section-title">
+          Venta de <span style="color: var(--primary);">Suministros</span>
+        </h2>
+        <p>
+          Contamos con alianzas estratégicas para el suministro de materiales de
+          alta calidad para el sector industrial y comercial.
+        </p>
+        <ul class="supply-list">
+          <li>
+            <strong style="color:var(--primary);">Herramientas:</strong> Distribución
+            marca TRUPER.
+          </li>
+          <li>
+            <strong style="color:var(--primary);">Eléctrico:</strong> Materiales de
+            baja y media tensión (comercial e industrial).
+          </li>
+          <li>
+            <strong style="color:var(--primary);"
+              >Elementos estructurales:</strong
+            > ASTM A36.
+          </li>
+          <li>
+            <strong style="color:var(--primary);">Tuberías y accesorios:</strong
+            > Acero inoxidable, acero al carbón, PVC y CPVC.
+          </li>
+        </ul>
+      </div>
+      <div class="brands-grid">
+        <div class="brand-box truper">TRUPER</div>
+        <div class="brand-box coel">Material Eléctrico</div>
+        <div class="brand-box">Tubería Industrial</div>
+        <div class="brand-box">Válvulas</div>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-    .supplies-section {
-        background: var(--bg-card);
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-    }
+  .supplies-section {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
 
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
     .content-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
+      grid-template-columns: 1fr;
     }
+  }
 
-    @media (max-width: 768px) {
-        .content-wrapper {
-            grid-template-columns: 1fr;
-        }
-    }
+  .supply-list {
+    margin-top: 2rem;
+  }
 
-    .supply-list {
-        margin-top: 2rem;
-    }
+  .supply-list li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--primary);
+    color: var(--text-muted);
+  }
 
-    .supply-list li {
-        margin-bottom: 1rem;
-        padding-left: 1rem;
-        border-left: 2px solid var(--primary);
-        color: var(--text-muted);
-    }
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 
-    .brands-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
+  .brand-box {
+    aspect-ratio: 3/2;
+    background: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
 
-    .brand-box {
-        aspect-ratio: 3/2;
-        background: var(--bg-main);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 800;
-        color: var(--text-muted);
-        font-size: 1.5rem;
-        border: 1px solid var(--border);
-        transition: all 0.3s;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
+  .brand-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+    color: var(--secondary);
+  }
 
-    .brand-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        border-color: var(--primary);
-        color: var(--secondary);
-    }
-
-    .truper:hover {
-        color: #f7931d;
-    }
-    .coel:hover {
-        color: #00aeef;
-    }
+  .truper:hover {
+    color: #f7931d;
+  }
+  .coel:hover {
+    color: #00aeef;
+  }
 </style>
