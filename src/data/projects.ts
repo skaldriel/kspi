@@ -13,7 +13,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "remodelacion-laboratorio-lister",
-    title: "Remodelación de Laboratorio Lister y Centro de Datos",
+    title: "Remodelación de laboratorio lister y centro de datos",
     client: "Laboratorios Lister",
     category: "Obra Civil / Proyectos Integrales",
     description:
@@ -30,7 +30,7 @@ export const projects: Project[] = [
   },
   {
     id: "ingenieria-azucarera-alianza-popular",
-    title: "Fabricación y Montaje de Sistemas de Conducción y Sedimentación",
+    title: "Fabricación y montaje de sistemas de conducción y sedimentación",
     client: "Ingenio Alianza Popular (Tambaca, S.L.P.)",
     category: "Proyectos Integrales de Fabricación",
     description:
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   },
   {
     id: "mantenimiento-termico-alta-presion",
-    title: "Mantenimiento Integral de Calderas e Instalación de Aislamiento",
+    title: "Mantenimiento integral de calderas",
     client: "N/A",
     category: "Mantenimiento Industrial",
     description:
@@ -64,7 +64,7 @@ export const projects: Project[] = [
   },
   {
     id: "soldadura-sanitaria-grado-alimenticio",
-    title: "Instalación de Tubería de Proceso e Infraestructura Eléctrica",
+    title: "Instalación de tubería de proceso e infraestructura eléctrica",
     client: "Sector Alimentario / Lácteo",
     category: "Tubería de Proceso / Eléctrico",
     description:
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     title:
       "Construcción de estructura y montaje de planta pre tratadora de aguas residuales",
     client: "N/A",
-    category: "Ingeniería Ambiental",
+    category: "Ingeniería ambiental",
     description:
       "Proyecto integral que contempló la fabricación de la estructura y el montaje de la planta de tratamiento, instalación de bombas de agua e interconexión de tuberías de suministro y descarga.",
     materials:
@@ -99,9 +99,9 @@ export const projects: Project[] = [
   },
   {
     id: "proteccion-activos-industriales",
-    title: "Impermeabilización y Sellado",
+    title: "Impermeabilización y sellado",
     client: "N/A",
-    category: "Mantenimiento de Edificaciones",
+    category: "Mantenimiento de edificaciones",
     description:
       "Limpieza profunda y sellado de caballetes y traslapes en techumbres industriales para la eliminación total de filtraciones.",
     materials:
@@ -116,7 +116,8 @@ export const projects: Project[] = [
   },
   {
     id: "mantenimiento-sistemas-enfriamiento",
-    title: "Mantenimiento General a Chiller y Torres de Enfriamiento",
+    title:
+      "Mantenimiento general a equipos de enfriamiento comercial e industrial y equipos mecánicos",
     client: "Planta SERROT",
     category: "Mantenimiento Mecánico",
     description:
