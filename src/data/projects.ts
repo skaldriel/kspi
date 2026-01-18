@@ -81,7 +81,8 @@ export const projects: Project[] = [
   },
   {
     id: "ingenieria-ambiental-ptar",
-    title: "Construcción de Planta de Tratamiento de Aguas Residuales (PTAR)",
+    title:
+      "Construcción de estructura y montaje de planta pre tratadora de aguas residuales",
     client: "N/A",
     category: "Ingeniería Ambiental",
     description:
@@ -98,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     id: "proteccion-activos-industriales",
-    title: "Impermeabilización y Sellado Técnico de Naves Industriales",
+    title: "Impermeabilización y Sellado",
     client: "N/A",
     category: "Mantenimiento de Edificaciones",
     description:
